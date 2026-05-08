@@ -4,18 +4,8 @@ import * as bcrypt from 'bcryptjs';
 import * as sql from 'mssql';
 import { DatabaseService } from '../database/database.service';
 import { LoginDto } from './dto/login.dto';
-import { ApiResponse } from 'src/interfaces/api-response.interface';
+import { ApiResponse, UserAuthRow } from 'src/interfaces/api-response.interface';
 
-interface UserAuthRow {
-  id: number;
-  username: string;
-  user_code: string;
-  first_name: string;
-  first_lastname: string;
-  email: string;
-  password: string;
-  role: string;
-}
 
 @Injectable()
 export class AuthService {
